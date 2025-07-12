@@ -862,7 +862,7 @@ def adbbot1(devicsX):
                     except:
                         pass
 
-            #################################################################
+            ########################## 111 ################################################################
             count_loop = 0
             sw_exit = 0
             while sw_hero != 3 and sw_emu1:
@@ -877,6 +877,13 @@ def adbbot1(devicsX):
                         cap = dv.screencap() 
                         image = np.frombuffer(cap, dtype=np.uint8)
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/b4.png')
+                        if len(pos_adb) > 0:
+                            sw_exit = 1
+                            break
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
                         pos_adb = ImgSearchADB(adb_img, 'bin/pic/z1.png')
                         if len(pos_adb) > 0:
                             sw_exit = 1
@@ -886,25 +893,38 @@ def adbbot1(devicsX):
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
                         pos_adb = ImgSearchADB(adb_img, 'bin/pic/mainstage.png')
                         if len(pos_adb) > 0:
-                            sw_exit = 1
-                            break
-                        cap = dv.screencap() 
-                        image = np.frombuffer(cap, dtype=np.uint8)
-                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
-                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/back1.png')
-                        if len(pos_adb) > 0:
-                            dv.shell(f"input tap 34 30")
+                            dv.shell(f"input tap {pos_adb[0][0]} {pos_adb[0][1]}")
                             time.sleep(0.1)
                         cap = dv.screencap() 
                         image = np.frombuffer(cap, dtype=np.uint8)
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
-                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/buff1.png')
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/s11.png')
                         if len(pos_adb) > 0:
-                            dv.shell(f"input tap 813 34")
+                            dv.shell(f"input tap {pos_adb[0][0]} {pos_adb[0][1]}")
+                            time.sleep(0.1)
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/skipplay2.png')
+                        if len(pos_adb) > 0:
+                            dv.shell(f"input tap {pos_adb[0][0]} {pos_adb[0][1]}")
+                            time.sleep(0.1)
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/freeitem.png')
+                        if len(pos_adb) > 0:
+                            dv.shell(f"input tap {pos_adb[0][0]} {pos_adb[0][1]}")
+                            time.sleep(0.1)
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/start1.png')
+                        if len(pos_adb) > 0:
+                            dv.shell(f"input tap {pos_adb[0][0]} {pos_adb[0][1]}")
                             time.sleep(0.1)
                     except:
                         pass
-            ##########################################################################################
 
             count_loop = 0
             sw_exit = 0
@@ -920,6 +940,13 @@ def adbbot1(devicsX):
                         cap = dv.screencap() 
                         image = np.frombuffer(cap, dtype=np.uint8)
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/back2.png')
+                        if len(pos_adb) > 0:
+                            sw_exit = 1
+                            break
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
                         pos_adb = ImgSearchADB(adb_img, 'bin/pic/z1.png')
                         if len(pos_adb) > 0:
                             sw_exit = 1
@@ -927,10 +954,68 @@ def adbbot1(devicsX):
                         cap = dv.screencap() 
                         image = np.frombuffer(cap, dtype=np.uint8)
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
-                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/back1.png')
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/ok2.png')
                         if len(pos_adb) > 0:
                             sw_exit = 1
                             break
+                        else:
+                            dv.shell("input tap 50 44")
+                            time.sleep(0.5)
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/ok2.png')
+                        if len(pos_adb) > 0:
+                            sw_exit = 1
+                            break
+                        else:
+                            dv.shell("input tap 380 480")
+                            time.sleep(0.5)
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/ok2.png')
+                        if len(pos_adb) > 0:
+                            sw_exit = 1
+                            break
+                        else:
+                            dv.shell("input tap 282 479")
+                            time.sleep(0.5)
+                    except:
+                        pass
+
+            ########################################################
+            count_loop = 0
+            sw_exit = 0
+            while sw_hero != 3 and sw_emu1:
+                if sw_exit == 1:
+                    break
+                while sw_hero != 3 and sw_emu1:
+                    if count_loop >= 100:
+                        sw_hero = 3
+                        break
+                    count_loop += 1
+                    try:
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/z1.png')
+                        if len(pos_adb) > 0:
+                            sw_exit = 1
+                            break
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/back2.png')
+                        pos_adb2 = ImgSearchADB(adb_img, 'bin/pic/ok2.png')
+                        if len(pos_adb) > 0 or len(pos_adb2) > 0:
+                            dv.shell("input keyevent KEYCODE_APP_SWITCH")
+                            time.sleep(0.1)
+                            for _ in range(3):
+                                dv.shell("input keyevent KEYCODE_DPAD_DOWN")
+                                time.sleep(0.1)
+                                dv.shell("input keyevent DEL")
+                                time.sleep(0.1)
                         cap = dv.screencap() 
                         image = np.frombuffer(cap, dtype=np.uint8)
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
@@ -1067,9 +1152,23 @@ def adbbot1(devicsX):
                         cap = dv.screencap() 
                         image = np.frombuffer(cap, dtype=np.uint8)
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/pop19.png')
+                        if len(pos_adb) > 0:
+                            dv.shell("input tap 730 76")
+                            time.sleep(0.1)
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
                         pos_adb = ImgSearchADB(adb_img, 'bin/pic/pop17.png')
                         if len(pos_adb) > 0:
                             dv.shell("input tap 858 37")
+                            time.sleep(0.1)
+                        cap = dv.screencap() 
+                        image = np.frombuffer(cap, dtype=np.uint8)
+                        adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+                        pos_adb = ImgSearchADB(adb_img, 'bin/pic/buff1.png')
+                        if len(pos_adb) > 0:
+                            dv.shell("input tap 812 35")
                             time.sleep(0.1)
                         cap = dv.screencap() 
                         image = np.frombuffer(cap, dtype=np.uint8)
@@ -1087,7 +1186,7 @@ def adbbot1(devicsX):
                             break
                     except:
                         pass
-                
+
             #############################################################################
             count_loop = 0
             sw_exit = 0
@@ -1146,16 +1245,17 @@ def adbbot1(devicsX):
                         image = np.frombuffer(cap, dtype=np.uint8)
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
                         pos_adb = ImgSearchADB(adb_img, 'bin/pic/7day.png')
+                        time.sleep(0.1)
                         if len(pos_adb) > 0:
                             dv.shell(f"input tap {pos_adb[0][0]} {pos_adb[0][1]}")
-                            time.sleep(0.1)
+  
                         cap = dv.screencap() 
                         image = np.frombuffer(cap, dtype=np.uint8)
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
                         pos_adb = ImgSearchADB(adb_img, 'bin/pic/1day.png')
                         if len(pos_adb) > 0:
                             dv.shell("input tap 334 436")
-                            time.sleep(0.1)
+
                     except:
                         pass
 
@@ -1205,6 +1305,7 @@ def adbbot1(devicsX):
                         if len(pos_adb) > 0:
                             dv.shell("input tap 839 32")
                             time.sleep(0.1)
+                            
                         cap = dv.screencap() 
                         image = np.frombuffer(cap, dtype=np.uint8)
                         adb_img = cv2.imdecode(image, cv2.IMREAD_COLOR)
@@ -1340,7 +1441,7 @@ def adbbot1(devicsX):
                             time.sleep(0.1)
                     except:
                         pass
-
+        
             count_loop = 0
             sw_exit = 0
             if gachaselect == 1:
@@ -1655,4 +1756,5 @@ def adbbot1(devicsX):
                     time.sleep(0.1)
                     dv.shell("input keyevent DEL")
                     time.sleep(0.1)
+
 
